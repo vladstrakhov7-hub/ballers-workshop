@@ -1,0 +1,327 @@
+.training-detail {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: all 0.2s;
+}
+
+.back-button:hover {
+  background: rgba(255, 215, 0, 0.3);
+  transform: translateX(-5px);
+}
+
+.training-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.player-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.player-icon-large {
+  font-size: 3rem;
+  background: rgba(255, 215, 0, 0.2);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid #FFD700;
+}
+
+.player-info h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.25rem;
+}
+
+.player-name {
+  color: #FFD700;
+  font-size: 0.9rem;
+}
+
+.difficulty-badge {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  color: #8B0000;
+  font-weight: bold;
+}
+
+.progress-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.progress-label {
+  font-size: 0.9rem;
+  color: #FFD700;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #FFD700, #FFA500);
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.progress-percent {
+  font-weight: bold;
+  color: #FFD700;
+}
+
+.training-viewer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .training-viewer {
+    grid-template-columns: 1fr;
+  }
+}
+
+.exercise-image {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.exercise-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.exercise-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  padding: 1rem;
+}
+
+.play-video-btn {
+  background: rgba(255, 215, 0, 0.9);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  color: #8B0000;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.play-video-btn:hover {
+  background: #FFD700;
+  transform: scale(1.02);
+}
+
+.exercise-info {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.step-indicator {
+  color: #FFD700;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.exercise-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.duration-badge {
+  display: inline-block;
+  background: rgba(255, 215, 0, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
+}
+
+.exercise-schema {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.75rem;
+}
+
+.exercise-schema h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #FFD700;
+}
+
+.schema-placeholder {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.complete-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  border: none;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  color: #8B0000;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+}
+
+.complete-btn.completed {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+}
+
+.complete-btn:hover {
+  transform: scale(1.02);
+}
+
+.steps-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.nav-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.nav-btn:hover:not(:disabled) {
+  background: rgba(255, 215, 0, 0.3);
+}
+
+.nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.steps-dots {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.step-dot {
+  width: 40px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.step-dot.active {
+  background: #FFD700;
+  width: 60px;
+}
+
+.step-dot.completed {
+  background: #22c55e;
+}
+
+.congrats-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  padding: 2rem;
+  border-radius: 2rem;
+  text-align: center;
+  color: #8B0000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 1000;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.congrats-modal p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.share-btn {
+  background: #8B0000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  color: #FFD700;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-weight: bold;
+}
