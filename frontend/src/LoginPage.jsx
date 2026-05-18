@@ -13,7 +13,7 @@ function LoginPage({ onLogin }) {
     const body = isLogin ? { username, password } : { username, password, email };
     
     try {
-      const res = await fetch(`http://localhost:5000${endpoint}`, {
+      const res = await fetch(`https://ballers-workshop.onrender.com${endpoint}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body)

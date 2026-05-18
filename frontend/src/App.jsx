@@ -17,7 +17,7 @@ function HomePage({ user, onLogout }) {
   const [showLogoutConfirm, setShowLogoutConfirm] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/aspects')
+    fetch('https://ballers-workshop.onrender.com/api/aspects')
       .then(res => res.json())
       .then(data => setAspects(data));
   }, []);
@@ -25,7 +25,7 @@ function HomePage({ user, onLogout }) {
   const selectAspect = async (id) => {
     const aspect = aspects.find(a => a.id === id);
     setSelectedAspectData(aspect);
-    const res = await fetch(`http://localhost:5000/api/aspect/${id}/trainings`);
+    const res = await fetch(`https://ballers-workshop.onrender.com/api/aspect/${id}/trainings`);
     const data = await res.json();
     setTrainings(data);
     setSelectedAspect(id);

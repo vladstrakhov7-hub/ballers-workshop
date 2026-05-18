@@ -10,7 +10,7 @@ function TrainingDetail({ aspect, trainings, onBack }) {
   // Сохранение прогресса на сервер
   const saveProgressToServer = async (steps) => {
     try {
-      await fetch('http://localhost:5000/api/save_progress', {
+      await fetch('https://ballers-workshop.onrender.com/api/save_progress', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -35,7 +35,7 @@ function TrainingDetail({ aspect, trainings, onBack }) {
   useEffect(() => {
     const loadProgress = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/get_progress?aspect_id=${aspect.id}`, {
+        const res = await fetch(`https://ballers-workshop.onrender.com/api/get_progress?aspect_id=${aspect.id}`, {
           credentials: 'include'
         });
         const data = await res.json();
