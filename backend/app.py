@@ -6,7 +6,11 @@ import json
 
 app = Flask(__name__)
 app.secret_key = 'ballers_workshop_secret_key_2025'
-CORS(app, supports_credentials=True, origins=['http://localhost:5173'])
+CORS(app, supports_credentials=True, origins=[
+    'http://localhost:5173',
+    'https://ballers-workshop.vercel.app',
+    'https://ballers-workshop.onrender.com'
+])
 
 def init_db():
     conn = sqlite3.connect('football.db')
